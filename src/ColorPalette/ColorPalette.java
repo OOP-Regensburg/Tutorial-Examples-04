@@ -8,7 +8,7 @@ import de.ur.mi.oop.graphics.Rectangle;
 
 /**
  * Diese GraphicsApp-Anwendung stellt in jedem Frame ein Gitternetz aus mehreren farbigen Rechtecken dar. Jedes Rechteck
- * verfügt über eine zufällige Farbe. Im inneren des Rechteck wird eine aufsteigende Nummer, beginnen bei "1" angezeigt.
+ * verfügt über eine zufällige Farbe. Im inneren des Rechteck wird eine aufsteigende Nummer, beginnend bei "1" angezeigt.
  */
 
 public class ColorPalette extends GraphicsApp {
@@ -78,16 +78,16 @@ public class ColorPalette extends GraphicsApp {
          */
         int squaresPerRow = WIDTH / SQUARE_SIZE;
         /**
-         * Zur Berechnung der x-Position wird der Modulo-Operator verwendet: Durch die Modulo-Divison (Rest) der aktuellen
+         * Zur Berechnung der x-Position wird der Modulo-Operator verwendet: Durch die Modulo-Division (Rest) der aktuellen
          * Position durch die Anzahl der Rechtecke pro Zeile ergibt sich die Position des aktuellen Rechtecks innerhalb
-         * der Zeile (0 bis 4). Durch die anschließende Multiplikation mit SQUARE_SIZE wird die konkrete Pixel-Position
+         * der Zeile (0 bis 4). Durch die anschließende Multiplikation mit SQUARE_SIZE wird die korrekte Pixel-Position
          * berechnet.
          */
         float xPosition = (position % squaresPerRow) * SQUARE_SIZE;
         /**
          * Zur Berechnung der y-Position wird die Division ohne Rest verwendet: Der Quotient aus aktueller Position und
          * Anzahl der Rechtecke pro Zeile entspricht der "Zeile", in die das aktuelle Rechteck gezeichnet werden soll
-         * 0 bis). Durch die anschließende Multiplikation mit SQUARE-SIZE wird die konkrete Pixel-Position berechnet.
+         * 0 bis). Durch die anschließende Multiplikation mit SQUARE-SIZE wird die korrekte Pixel-Position berechnet.
          */
         float yPositon = (position / squaresPerRow) * SQUARE_SIZE;
         Color randomColor = Colors.getRandomColor();
